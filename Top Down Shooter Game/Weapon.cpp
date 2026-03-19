@@ -35,22 +35,22 @@ void Weapon::printInfo()
 	int posX = 10;
 	int posY = 10;
 
-	strcpy_s(message, "Clip: ");
-	strcat_s(message, std::to_string(currentClipSize).c_str());
-	strcat_s(message, "/");
-	strcat_s(message, std::to_string(clipSize).c_str());
+	strcpy(message, "Clip: ");
+	strcat(message, std::to_string(currentClipSize).c_str());
+	strcat(message, "/");
+	strcat(message, std::to_string(clipSize).c_str());
 	DrawText(message, posX, posY, fontSize, textColor);
 	posY += fontSize;
 
-	strcpy_s(message, "Ammo: ");
-	strcat_s(message, std::to_string(extraAmmo).c_str());
+	strcpy(message, "Ammo: ");
+	strcat(message, std::to_string(extraAmmo).c_str());
 	DrawText(message, posX, posY, fontSize, textColor);
 	posY += fontSize;
 	posY += fontSize;
 
 	if (reloading)
 	{
-		strcpy_s(message, "Reloading... ");
+		strcpy(message, "Reloading... ");
 		DrawText(message, posX, posY, fontSize, textColor);
 		posY += fontSize;
 

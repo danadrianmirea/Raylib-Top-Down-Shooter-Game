@@ -54,7 +54,7 @@ Color Character::lerpColor(Color color1, Color color2, float ratio)
 }
 void Character::drawHealthBar(Vector2 cameraPos, float size, Color lowHealthColor, Color highHealthColor, float borderSize, Color borderColor)
 {
-	Rectangle healthBar = { getHitBoxCenterPos().x - size / 2.0 - cameraPos.x, pos.y - size / 8.0 - cameraPos.y, size * (float)currentHealth / maxHealth, size / 8.0};
+	Rectangle healthBar = { (float)(getHitBoxCenterPos().x - size / 2.0 - cameraPos.x), (float)(pos.y - size / 8.0 - cameraPos.y), size * (float)currentHealth / maxHealth, (float)(size / 8.0)};
 	Rectangle border = healthBar;
 	border.x -= borderSize / 2;
 	border.y -= borderSize / 2;

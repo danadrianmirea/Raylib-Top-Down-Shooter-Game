@@ -6,7 +6,7 @@
 class Character
 {
 public:
-	static enum StatusEnum { IDLE, RUN, DEAD };
+	enum StatusEnum { IDLE, RUN, DEAD };
 
 protected:
 	AnimationPro current;

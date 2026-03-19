@@ -95,7 +95,8 @@ void PrintTimeSurvived(float fontSize = 50, Color textColor = BLACK)
 	int posX;
 	int posY = fontSize;
 
-	strcpy_s(message, std::to_string(time).c_str());
+	std::string timeStr = std::to_string(time);
+	strcpy(message, timeStr.c_str());
 	textWidth = MeasureText(message, fontSize);
 	posX = (SCREEN_WIDTH - textWidth) / 2;
 	DrawText(message, posX, posY, fontSize, textColor);
@@ -108,8 +109,8 @@ void PrintKillCount(float fontSize = 50, Color textColor = BLACK)
 	int posX;
 	int posY = fontSize;
 
-	strcpy_s(message, "Kills: ");
-	strcat_s(message, std::to_string(killCount).c_str());
+	strcpy(message, "Kills: ");
+	strcat(message, std::to_string(killCount).c_str());
 	textWidth = MeasureText(message, fontSize);
 	posX = (SCREEN_WIDTH - textWidth) - fontSize;
 	DrawText(message, posX, posY, fontSize, textColor);
@@ -123,15 +124,15 @@ void PrintGameOver(float fontSize = 100, Color textColor = RED)
 	int posX;
 	int posY = (SCREEN_HEIGHT / 2) - fontSize * 3;
 
-	strcpy_s(message, "Game Over");
+	strcpy(message, "Game Over");
 	textWidth = MeasureText(message, fontSize);
 	posX = (SCREEN_WIDTH - textWidth) / 2;
 	DrawText(message, posX, posY, fontSize, textColor);
 	posY += fontSize;
 
-	strcpy_s(message, "Time Survived: ");
-	strcat_s(message, std::to_string((int)timeSurvived).c_str());
-	strcat_s(message," Seconds");
+	strcpy(message, "Time Survived: ");
+	strcat(message, std::to_string((int)timeSurvived).c_str());
+	strcat(message," Seconds");
 	textWidth = MeasureText(message, fontSize);
 	posX = (SCREEN_WIDTH - textWidth) / 2;
 	DrawText(message, posX, posY, fontSize, textColor);

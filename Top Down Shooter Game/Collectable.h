@@ -7,7 +7,7 @@
 class Collectable
 {
 public:
-	static enum CollectableType {PISTOL_COLLECTABLE, ASSAULT_RIFLE_COLLECTABLE, SHOT_GUN_COLLECTABLE};
+	enum CollectableType {PISTOL_COLLECTABLE, ASSAULT_RIFLE_COLLECTABLE, SHOT_GUN_COLLECTABLE};
 
 private:
 	CollectableType collectableType;
